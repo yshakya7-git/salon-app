@@ -66,14 +66,10 @@ export default function Home() {
       </section>
 
       {/* add to cart card */}
-      <section>
-        <CartCard />
-      </section>
+      <CartCard />
 
       {/* testimonial section */}
-      <section>
-        <TestimonialCard />
-      </section>
+      <TestimonialCard />
     </div>
   );
 }

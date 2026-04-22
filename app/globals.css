@@ -10,7 +10,10 @@
   --color-foreground: var(--foreground);
   --color-primary: #EE2B8C;
   --color-secondary: #E6DBE0;
-  --color=white: #ffffff;
+  --color-white: #ffffff;
+  --color-font: #181114;
+  --color-secondary-font: #18111480;
+  --color-success: #16A34A;
   --font-sans: var(--font-plus-jakarta-sans);
 }
 
@@ -24,4 +27,16 @@
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Edge */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }

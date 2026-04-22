@@ -1,19 +1,86 @@
-import Logo from "@/app/icons/Logo";
+"use client";
 
+import { useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import Logo from "@/app/icons/Logo";
 import BellIcon from "@/app/icons/BellIcon";
 import UserIcon from "@/app/icons/UserIcon";
+import HamburgerIcon from "@/app/icons/HamburgerIcon";
+
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact", href: "/contact" },
+];
 
 export const AppHeader = () => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <section className="h-16 px-4 py-3 flex justify-between items-center bg-white">
-      <div className="flex gap-4 items-center">
-        <Logo width={25} height={25} />
-        <h1 className="font-bold text-lg">Luxe Beauty</h1>
-      </div>
-      <div className="flex items-center gap-4">
-        <BellIcon width={40} height={40} />
-        <UserIcon width={40} height={40} />
-      </div>
-    </section>
+    <>
+      <section className="h-16 px-4 py-3 flex justify-between items-center bg-white shadow-sm relative z-50">
+        <div className="flex gap-4 items-center">
+          <Logo width={25} height={25} />
+          <h1 className="font-bold text-lg">Luxe Beauty</h1>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <BellIcon width={32} height={32} />
+          <UserIcon width={32} height={32} />
+
+          {/* Hamburger */}
+          <button
+            onClick={() => setOpen(true)}
+            className="md:hidden active:scale-95 transition"
+          >
+            <HamburgerIcon />
+          </button>
+        </div>
+      </section>
+
+      {/* MOBILE MENU */}
+      <AnimatePresence>
+        {open && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setOpen(false)}
+              className="fixed inset-0 bg-black z-40"
+            />
+
+            <motion.aside
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", stiffness: 120 }}
+              className="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white z-50 shadow-xl p-6 flex flex-col gap-6"
+            >
+              <button
+                onClick={() => setOpen(false)}
+                className="self-end text-xl active:scale-95"
+              >
+                ✕
+              </button>
+
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="text-lg font-medium text-gray-800 active:scale-95 transition"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </motion.aside>
+          </>
+        )}
+      </AnimatePresence>
+    </>
   );
 };

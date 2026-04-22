@@ -31,7 +31,7 @@ export const storyList = [
 export const StoryHighlights = () => {
   return (
     <section className="">
-      <div className="max-w-6xl mx-auto flex gap-2 overflow-x-auto">
+      <div className="max-w-6xl mx-auto flex gap-2 overflow-x-auto scrollbar-hide">
         {storyList.map((item) => (
           <div key={item.id} className="flex flex-col items-center min-w-22.5">
             <div className="relative w-18 h-18 rounded-full overflow-hidden border-3 border-pink-500">

@@ -3,11 +3,13 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const images = ["/banner.png", "/banner.png", "/banner.png"];
 
 export const HeroSection = () => {
   const [index, setIndex] = useState(0);
+  const router = useRouter();
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -53,7 +55,10 @@ export const HeroSection = () => {
           Experience world-class beauty services at our salon or from home.
         </p>
 
-        <button className="bg-primary hover:bg-pink-700 px-10 py-3 rounded-full text-sm font-semibold transition">
+        <button
+          className="bg-primary hover:bg-pink-700 px-10 py-3 rounded-full text-sm font-semibold transition"
+          onClick={() => router.push("/contact")}
+        >
           Book Appointment
         </button>
       </div>
