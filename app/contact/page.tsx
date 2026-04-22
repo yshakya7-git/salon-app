@@ -1,6 +1,5 @@
 "use client";
 
-import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import { Button } from "../components/button/Button";
 import FeaturedCard from "../components/cards/FeaturedCard";
 import { InputField } from "../components/textfield/InputField";
@@ -146,7 +145,9 @@ const Contact = () => {
 
       <section className="flex flex-col justify-center items-center ">
         <span className="text-secondary-font">Follow us for beauty tips</span>
-        <span className="text-secondary-font">© 2024 Bloom Beauty Parlor. All rights reserved.</span>
+        <span className="text-secondary-font">
+          © 2024 Bloom Beauty Parlor. All rights reserved.
+        </span>
       </section>
     </div>
   );
