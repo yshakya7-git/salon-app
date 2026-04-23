@@ -33,7 +33,7 @@ export const CartCard = () => {
     <div className="space-y-4 lg:px-4">
       <TitleBar title="Trending Now" />
 
-      <div className="space-y-5 grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className=" grid grid-cols-1 lg:grid-cols-3 gap-4">
         {services.map((service) => (
           <ServiceCard key={service.id} {...service} />
         ))}
@@ -58,7 +58,7 @@ export const ServiceCard = ({
   btnTitle?: string;
 }) => {
   return (
-    <div className="flex flex-row lg:flex-col items-center  gap-4 bg-white rounded-3xl p-2 shadow-sm border border-gray-200 w-full">
+    <div className="flex flex-row lg:flex-col items-center  gap-2 bg-white rounded-3xl p-2 shadow-sm border border-gray-200 w-full">
       <div className="w-26 h-22 lg:w-full lg:h-56 relative rounded-xl overflow-hidden">
         <Image src={image} alt={title} fill className="object-cover" />
       </div>

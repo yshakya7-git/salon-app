@@ -8,7 +8,7 @@ type ServiceCardProps = {
 
 export const ServiceCard = ({ icon, title, description }: ServiceCardProps) => {
   return (
-    <div className="flex items-start gap-6 bg-background  p-4 rounded-3xl">
+    <div className="flex items-start gap-6 bg-background dark:bg-secondary p-4 rounded-3xl">
       <span>{icon}</span>
 
       <div>

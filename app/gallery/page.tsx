@@ -29,7 +29,7 @@ export default Gallery;
 
 const AllGallery = ({ images }: { images: string[] }) => {
   return (
-    <div className="relative p-4 pb-24">
+    <div className="relative pb-24">
       <div className="columns-2 sm:columns-3 md:columns-4 gap-3 space-y-3">
         {images.map((src, i) => (
           <div

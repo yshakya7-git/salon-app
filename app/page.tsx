@@ -38,7 +38,7 @@ const salonFeatures: FeatureRes[] = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 bg-background  dark:bg-black p-4 lg:p-0 gap-6">
+    <div className="flex flex-col flex-1 bg-background  dark:bg-black dark:text-foreground p-4 lg:p-0 gap-6">
       <HeroSection />
       <section className="grid grid-cols-3 gap-2 lg:gap-6 lg:px-4 lg:py-6 ">
         {salonFeatures.map((feature) => (

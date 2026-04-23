@@ -43,7 +43,7 @@ export const StoryHighlights = () => {
               />
             </div>
 
-            <p className="text-sm lg:text-base mt-2 text-gray-700 text-center font-medium">
+            <p className="text-sm lg:text-base mt-2 text-gray-700 dark:text-foreground text-center font-medium">
               {item.name}
             </p>
           </div>

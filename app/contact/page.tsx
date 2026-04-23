@@ -56,7 +56,7 @@ const workDays = [
 const Contact = () => {
   return (
     <div className="p-4 space-y-6">
-      <p className="text-center text-font text-sm">
+      <p className="text-center text-font dark:text-foreground text-sm">
         Have a question or want to book a service?
         <br /> We'd love to hear from you.
       </p>
@@ -127,15 +127,15 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="border border-secondary rounded-lg ">
+        <div className="border border-secondary rounded ">
           {workDays.map((day, index) => (
             <div
               key={day.id}
-              className={`flex justify-between items-center px-4 py-2 ${
+              className={`flex justify-between items-center px-4 py-2 dark:bg-white ${
                 index !== workDays.length - 1 ? "border-b border-secondary" : ""
               }`}
             >
-              <p className="text-sm text-font">{day.workDays}</p>
+              <p className="text-sm text-font ">{day.workDays}</p>
               <p className="text-sm text-font font-bold">{day.workSchedule}</p>
             </div>
           ))}
@@ -144,8 +144,10 @@ const Contact = () => {
       <hr className="border border-secondary" />
 
       <section className="flex flex-col justify-center items-center ">
-        <span className="text-secondary-font">Follow us for beauty tips</span>
-        <span className="text-secondary-font">
+        <span className="text-secondary-font dark:text-foreground text-xs lg:text-sm">
+          Follow us for beauty tips
+        </span>
+        <span className="text-secondary-font dark:text-foreground text-xs lg:text-sm">
           © 2024 Bloom Beauty Parlor. All rights reserved.
         </span>
       </section>

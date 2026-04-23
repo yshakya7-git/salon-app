@@ -64,13 +64,13 @@ const About = () => {
             </h2>
           </div>
 
-          <p className="border-l-4 border-primary pl-4 mt-2 text-font text-justify font-medium">
+          <p className="border-l-4 border-primary pl-4 mt-2 text-font dark:text-foreground text-justify font-medium">
             "At our salon, we believe beauty is a journey of self-love. Our
             mission is to provide premium beauty services that empower women to
             feel confident and radiant in their own skin."
           </p>
 
-          <p className="text-[#181114B2] text-sm text-justify mt-4 font-medium">
+          <p className="text-[#181114B2] dark:text-foreground/90 text-sm text-justify mt-4 font-medium">
             Whether you visit our sanctuary in the city or book our expert team
             for a session at home, we are dedicated to providing an unparalleled
             experience tailored specifically to your needs.
@@ -89,11 +89,11 @@ const About = () => {
                   className="w-full h-auto rounded-lg mt-4"
                 />
 
-                <p className="text-md text-font font-bold text-center">
+                <p className="text-md text-font dark:text-foreground font-bold text-center">
                   {expert.name}
                 </p>
 
-                <p className="text-center text-sm text-[#6B7280]">
+                <p className="text-center text-sm text-[#6B7280] dark:text-foreground/90">
                   {expert.role}
                 </p>
               </div>
@@ -102,7 +102,7 @@ const About = () => {
         </section>
       </div>
 
-      <section className="bg-white p-4 space-y-4">
+      <section className="bg-white dark:bg-black p-4 space-y-4">
         <TitleBar title="The Organic Promise" />
 
         <ServiceCard
@@ -134,7 +134,7 @@ const About = () => {
           <Button variant="secondary">Explore Home Service</Button>
         </div>
       </section>
-      <section className="bg-white p-4">
+      <section className="bg-white dark:bg-black dark:border-t dark:border-t-secondary p-4">
         <Button fullWidth variant="primary">Book an Appointment</Button>
       </section>
     </div>

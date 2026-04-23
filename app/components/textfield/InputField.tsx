@@ -20,13 +20,13 @@ export const InputField = ({
   children,
   ...props
 }: TextFieldProps) => {
-  const baseClass = `text-xs bg-white border disabled:cursor-not-allowed disabled:bg-gray-100 focus:ring focus:ring-primary focus:outline-none rounded-full px-3 py-2 w-full outline-none placeholder-gray-400 
+  const baseClass = `text-xs bg-white border disabled:cursor-not-allowed disabled:bg-gray-100 focus:ring focus:ring-primary focus:outline-none rounded-full px-3 py-2 w-full outline-none placeholder-black text-font dark:bg-secondary dark:border-secondary dark:text-black 
   ${error ? "border-red-500" : "border-secondary"}`;
 
   return (
     <div className="flex flex-col gap-1 w-full">
       {label && (
-        <label className="text-sm font-medium text-font">
+        <label className="text-sm font-medium text-font dark:text-foreground">
           {label} {required && <span className="text-error">*</span>}
         </label>
       )}

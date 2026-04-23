@@ -23,7 +23,7 @@ export const AppHeader = () => {
 
   return (
     <>
-      <section className="h-16 px-4 py-3 flex justify-between items-center bg-white shadow-sm relative z-50">
+      <section className="h-16 px-4 py-3 flex justify-between items-center bg-white shadow-sm relative z-50 dark:bg-black dark:border-b dark:border-gray-700">
         <div className="flex gap-4 items-center">
           <Logo width={25} height={25} />
           <h1 className="font-bold text-lg">Luxe Beauty</h1>
