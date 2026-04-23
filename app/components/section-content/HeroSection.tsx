@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-const images = ["/banner.png", "/banner.png", "/banner.png"];
+const images = ["/backgroundImg.jpg", "/bgImg2.jpg", "/bgImg3.jpg"];
 
 export const HeroSection = () => {
   const [index, setIndex] = useState(0);
@@ -20,7 +20,7 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-125 w-full overflow-hidden rounded-2xl">
+    <section className="relative h-125 w-full overflow-hidden rounded-2xl lg:rounded-none">
       {/* IMAGE */}
       <motion.div
         key={index}
@@ -38,10 +38,7 @@ export const HeroSection = () => {
         />
       </motion.div>
 
-      {/* OVERLAY */}
       <div className="absolute inset-0 bg-black/40 z-10" />
-
-      {/* CONTENT */}
       <div className="relative z-20 flex flex-col items-start justify-center h-full text-white px-6 gap-4 mt-24">
         <span className="bg-linear-to-r from-pink-400 to-orange-300 px-4 py-1 rounded-full text-xs">
           EXCLUSIVE SALON & SPA

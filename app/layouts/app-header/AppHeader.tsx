@@ -7,6 +7,7 @@ import Logo from "@/app/icons/Logo";
 import BellIcon from "@/app/icons/BellIcon";
 import UserIcon from "@/app/icons/UserIcon";
 import HamburgerIcon from "@/app/icons/HamburgerIcon";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -18,6 +19,7 @@ const navItems = [
 
 export const AppHeader = () => {
   const [open, setOpen] = useState(false);
+  const pathName = usePathname();
 
   return (
     <>
@@ -27,6 +29,26 @@ export const AppHeader = () => {
           <h1 className="font-bold text-lg">Luxe Beauty</h1>
         </div>
 
+        <div className="hidden lg:flex gap-4">
+          {navItems.map((item) => {
+            const isActive = pathName === item.href;
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`text-sm  transition ${
+                  isActive
+                    ? "text-primary border-b-2 border-primary font-semibold"
+                    : "text-[#71717A] font-medium"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+        </div>
+
         <div className="flex items-center gap-4">
           <BellIcon width={32} height={32} />
           <UserIcon width={32} height={32} />
@@ -34,7 +56,7 @@ export const AppHeader = () => {
           {/* Hamburger */}
           <button
             onClick={() => setOpen(true)}
-            className="md:hidden active:scale-95 transition"
+            className="lg:hidden active:scale-95 transition"
           >
             <HamburgerIcon />
           </button>

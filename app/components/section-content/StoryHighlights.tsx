@@ -31,10 +31,10 @@ export const storyList = [
 export const StoryHighlights = () => {
   return (
     <section className="">
-      <div className="max-w-6xl mx-auto flex gap-2 overflow-x-auto scrollbar-hide">
+      <div className="max-w-7xl flex gap-2 lg:gap-6 overflow-x-auto scrollbar-hide">
         {storyList.map((item) => (
-          <div key={item.id} className="flex flex-col items-center min-w-22.5">
-            <div className="relative w-18 h-18 rounded-full overflow-hidden border-3 border-pink-500">
+          <div key={item.id} className="flex flex-col items-center ">
+            <div className="relative w-18 h-18 lg:w-24 lg:h-24 rounded-full overflow-hidden border-3 border-pink-500">
               <Image
                 src={item.image}
                 alt={item.name}
@@ -43,7 +43,7 @@ export const StoryHighlights = () => {
               />
             </div>
 
-            <p className="text-sm mt-2 text-gray-700 text-center">
+            <p className="text-sm lg:text-base mt-2 text-gray-700 text-center font-medium">
               {item.name}
             </p>
           </div>

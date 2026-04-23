@@ -1,4 +1,5 @@
 import Image from "next/image";
+import TitleBar from "../section-content/TitleBar";
 
 export const services = [
   {
@@ -23,16 +24,16 @@ export const services = [
     duration: "45 mins",
     role: "Senior Artist",
     price: "$65",
-    image: "/Cart1.png",
+    image: "/gallery3.jpg",
   },
 ];
 
 export const CartCard = () => {
   return (
-    <div className="space-y-4">
-      <h1 className="text-base font-semibold">Trending Now</h1>
+    <div className="space-y-4 lg:px-4">
+      <TitleBar title="Trending Now" />
 
-      <div className="space-y-5">
+      <div className="space-y-5 grid grid-cols-1 lg:grid-cols-3 gap-4">
         {services.map((service) => (
           <ServiceCard key={service.id} {...service} />
         ))}
@@ -57,8 +58,8 @@ export const ServiceCard = ({
   btnTitle?: string;
 }) => {
   return (
-    <div className="flex items-center  gap-4 bg-white rounded-3xl p-2 shadow-sm border border-gray-200 w-full">
-      <div className="w-26 h-22 relative rounded-xl overflow-hidden">
+    <div className="flex flex-row lg:flex-col items-center  gap-4 bg-white rounded-3xl p-2 shadow-sm border border-gray-200 w-full">
+      <div className="w-26 h-22 lg:w-full lg:h-56 relative rounded-xl overflow-hidden">
         <Image src={image} alt={title} fill className="object-cover" />
       </div>
 
@@ -71,7 +72,7 @@ export const ServiceCard = ({
         <div className="flex justify-between items-center mt-2">
           <p className="text-pink-500 font-semibold text-sm">{price}</p>
 
-          <button className="bg-pink-100 text-pink-500 px-4 py-2 rounded-full font-medium hover:bg-pink-200 transition text-xs">
+          <button className="bg-primary text-white px-4 py-2 rounded-full font-medium hover:bg-pink-700 transition text-xs">
             {btnTitle}
           </button>
         </div>
