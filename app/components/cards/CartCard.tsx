@@ -8,7 +8,7 @@ export const services = [
     duration: "90 mins",
     role: "Professional Stylist",
     price: "$120+",
-    image: "/banner.png",
+    image: "/HairHighlight.jpg",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const services = [
     duration: "60 mins",
     role: "Skin Specialist",
     price: "$85",
-    image: "/Cart2.png",
+    image: "/aboutImg.jpg",
   },
   {
     id: 3,
@@ -59,7 +59,7 @@ export const ServiceCard = ({
 }) => {
   return (
     <div className="flex flex-row lg:flex-col items-center  gap-2 bg-white rounded-3xl p-2 shadow-sm border border-gray-200 w-full">
-      <div className="w-26 h-22 lg:w-full lg:h-56 relative rounded-xl overflow-hidden">
+      <div className="w-26 h-22 lg:w-full lg:h-96 relative rounded-xl overflow-hidden">
         <Image src={image} alt={title} fill className="object-cover" />
       </div>
 

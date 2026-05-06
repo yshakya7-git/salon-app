@@ -145,16 +145,6 @@ const Contact = () => {
           ))}
         </div>
       </section>
-      <hr className="border border-secondary" />
-
-      <section className="flex flex-col justify-center items-center ">
-        <span className="text-secondary-font dark:text-foreground text-xs lg:text-sm">
-          Follow us for beauty tips
-        </span>
-        <span className="text-secondary-font dark:text-foreground text-xs lg:text-sm">
-          © 2024 Bloom Beauty Parlor. All rights reserved.
-        </span>
-      </section>
     </div>
   );
 };

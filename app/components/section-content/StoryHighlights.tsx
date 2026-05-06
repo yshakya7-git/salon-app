@@ -4,27 +4,27 @@ export const storyList = [
   {
     id: 1,
     name: "Hair Care",
-    image: "/banner.png",
+    image: "/HairHighlight.jpg",
   },
   {
     id: 2,
     name: "Facial",
-    image: "/banner.png",
+    image: "/aboutImg.jpg",
   },
   {
     id: 3,
     name: "Makeup",
-    image: "/banner.png",
+    image: "/gallery3.jpg",
   },
   {
     id: 4,
     name: "Nails",
-    image: "/banner.png",
+    image: "/nails.jpg",
   },
   {
     id: 5,
     name: "Spa",
-    image: "/banner.png",
+    image: "/skincare.jpg",
   },
 ];
 
@@ -34,7 +34,7 @@ export const StoryHighlights = () => {
       <div className="max-w-7xl flex gap-2 lg:gap-6 overflow-x-auto scrollbar-hide">
         {storyList.map((item) => (
           <div key={item.id} className="flex flex-col items-center ">
-            <div className="relative w-18 h-18 lg:w-24 lg:h-24 rounded-full overflow-hidden border-3 border-pink-500">
+            <div className="relative w-18 h-18 lg:w-24 lg:h-24 rounded-full overflow-hidden border-3 border-secondary">
               <Image
                 src={item.image}
                 alt={item.name}
