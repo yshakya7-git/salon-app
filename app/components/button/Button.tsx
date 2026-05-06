@@ -21,7 +21,7 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-full font-medium transition !py-3";
+    "inline-flex items-center justify-center gap-2 rounded-full font-medium transition !py-3 w-full";
 
   const sizes = {
     sm: "px-3 py-1.5 text-sm",
@@ -30,7 +30,7 @@ export const Button = ({
   };
 
   const variants = {
-    primary: "bg-primary text-white hover:bg-blue-700",
+    primary: "bg-primary text-white hover:bg-red-600",
     secondary: "bg-white text-primary hover:bg-gray-300",
     danger: "bg-red-600 text-white hover:bg-red-700",
     outline: "border border-gray-300 hover:bg-gray-100",

@@ -37,7 +37,7 @@ const FacialStyleTabContent = () => {
         <span className="text-primary text-sm font-semibold">3 SERVICES</span>
       </div>
 
-      <div className="space-y-5">
+      <div className="space-y-5 grid grid-cols-1 md:grid-cols-3 gap-6">
         {hairStyleServices.map((service) => (
           <ServiceCard key={service.id} {...service} />
         ))}

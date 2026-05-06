@@ -17,7 +17,7 @@ export const Tabs = ({ tabs, defaultActiveId }: TabsProps) => {
   const [active, setActive] = useState(defaultActiveId ?? tabs[0]?.id);
 
   return (
-    <div className="p-4 space-y-4">
+    <div className="space-y-4">
       <div className="flex gap-3 overflow-x-auto scrollbar-hide touch-pan-x pb-2">
         {tabs.map((tab) => {
           const isActive = active === tab.id;

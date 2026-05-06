@@ -73,36 +73,40 @@ const Contact = () => {
 
       <section className="space-y-4">
         <h1 className="text-base font-bold">Send us a Message</h1>
-        <form action="" className="space-y-4">
-          <InputField label="Full Name" placeholder="Jane Doe" />
-          <InputField label="Email" placeholder="jane.doe@example.com" />
-          <InputField
-            as="select"
-            required
-            label="Service Interest"
-            // {...register("complaintTypeID")}
-            placeholder="Enter Complaint Type"
-            // error={Boolean(errors.complaintTypeID?.message)}
-            // helperText={errors.complaintTypeID?.message}
-          >
-            <option value="">Select Complaint Type</option>
+        <form action="">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <InputField label="Full Name" placeholder="Jane Doe" />
+            <InputField label="Email" placeholder="jane.doe@example.com" />
+            <InputField
+              as="select"
+              required
+              label="Service Interest"
+              // {...register("complaintTypeID")}
+              placeholder="Enter Complaint Type"
+              // error={Boolean(errors.complaintTypeID?.message)}
+              // helperText={errors.complaintTypeID?.message}
+            >
+              <option value="">Select Complaint Type</option>
 
-            {getServiceIntData &&
-              getServiceIntData.map((item) => (
-                <option key={item.id} value={item.id}>
-                  {item.title}
-                </option>
-              ))}
-          </InputField>
-          <InputField
-            label="Message"
-            placeholder="How can we help you?"
-            as="textarea"
-          />
+              {getServiceIntData &&
+                getServiceIntData.map((item) => (
+                  <option key={item.id} value={item.id}>
+                    {item.title}
+                  </option>
+                ))}
+            </InputField>
+            <InputField
+              label="Message"
+              placeholder="How can we help you?"
+              as="textarea"
+            />
+          </div>
 
-          <Button type="submit" variant="primary" fullWidth>
-            Send Message
-          </Button>
+          <div className="col-span-1 md:col-span-3 ">
+            <Button type="submit" variant="primary">
+              Send Message
+            </Button>
+          </div>
         </form>
       </section>
 
